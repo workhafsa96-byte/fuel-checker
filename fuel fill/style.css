@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5e3f3;
+    padding: 15px;
+}
+
+/* Card */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 0 20px 30px; /* 👈 top padding removed for header */
+    transition: 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+.container h1 {
+    background: #799112;
+    color: #fff;
+    padding: 18px;
+    text-align: center;
+    font-size: 22px;
+    margin: 0 -20px 25px; /* 👈 full width header fix */
+}
+
+/* Inputs & Button */
+.container input,
+.container button {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Input */
+.container input {
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.container input:focus {
+    border-color: #08e5e9;
+    box-shadow: 0 0 5px rgba(8, 229, 233, 0.5);
+}
+
+/* Button */
+.container button {
+    border: none;
+    background: #799112;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #245a5b;
+}
+
+/* Message */
+#message {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* 📱 Mobile Fix */
+@media (max-width: 480px) {
+    .container h1 {  /* 👈 FIXED */
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .container input,
+    .container button {
+        width: 95%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
